@@ -5,4 +5,6 @@ with sync_playwright() as p:
     #create a new page
     page =browser.new_page()
     page.goto("https://playwright.dev/python") #playwright website
+    #get URL
+    print("Docs:",page.url)
     browser.close()
