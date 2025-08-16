@@ -4,5 +4,5 @@ with sync_playwright() as p:
     browser=p.chromium.launch(headless=False,slow_mo=800)
     #create a new page
     page =browser.new_page()
-    page.goto("https://playwright.dev/python")
+    page.goto("https://playwright.dev/python") #playwright website
     browser.close()
