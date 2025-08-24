@@ -10,7 +10,6 @@ with sync_playwright() as p:
     page.goto("https://bootswatch.com/default/")
 
     element = page.locator("div.bs-component > ul.list-group").nth(0).locator("li").nth(0)
-
     print(element.inner_text())
     time.sleep(20)
     browser.close()
