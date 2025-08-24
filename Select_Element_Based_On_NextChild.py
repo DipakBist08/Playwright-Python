@@ -13,3 +13,12 @@ with sync_playwright() as p:
     print(element.inner_text())
     time.sleep(20)
     browser.close()
+
+    """
+    Here,
+    div.bs-component--> is a parent selector,
+    ul.list-group --> is a child selector
+    and > --> it directly selects parent child selector instead of looking another selectors.
+    
+    
+    """
