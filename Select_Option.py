@@ -20,4 +20,9 @@ with sync_playwright() as p:
     Select_Element2 = page.get_by_label("Example select")
     Select_Element2.select_option(index=1)
     time.sleep(5)
+
+    #Multi Selection Option
+    Multi_Select = page.get_by_label("Example multiple select")
+    Multi_Select.select_option(["2","4","5"])
+    time.sleep(5)
     browser.close()
