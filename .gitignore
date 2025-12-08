@@ -7,3 +7,8 @@
 playwright/.auth/storage_state.json
 playwright/.google_profile/
 /playwright
+
+# Playwright auth files
+auth.json
+storage_state.json
+playwright/.auth/
