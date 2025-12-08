@@ -8,7 +8,7 @@ password = os.getenv('GOOGLE_PASSWORD')
 print(f"EMAIL Loaded: {email}")
 print(f"Password loaded: {password}")
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False,slow_mo=500)
+    browser = p.chromium.launch(headless=False,slow_mo=500,args=["--disable-dev-shm-usage","--disable-blink-features=AutomationControlled"])
     page = browser.new_page()
     page.goto("https://accounts.google.com")
     email_phone = page.get_by_label("Email or phone")
@@ -20,4 +20,3 @@ with sync_playwright() as p:
     Enter_password.clear()
     Enter_password.fill(password)
     Next_button.click()
-    browser.close()
