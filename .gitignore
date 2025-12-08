@@ -12,3 +12,5 @@ playwright/.google_profile/
 auth.json
 storage_state.json
 playwright/.auth/
+*.json
+!package.json
