@@ -14,3 +14,10 @@ storage_state.json
 playwright/.auth/
 *.json
 !package.json
+
+Save_authentication-test.py
+        Sync_With_Python.py
+        __pycache__/main.cpython-310.pyc
+        __pycache__/test_main.cpython-310-pytest-9.0.2.pyc
+        main.py
+        test_main.py
