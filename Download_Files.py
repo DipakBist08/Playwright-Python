@@ -10,11 +10,11 @@ with sync_playwright() as p:
 
     Download_Options = page.locator("div.downloadItem--xBKyT").last
     Download_Options.click()
-    Download_Btn = page.locator('div.buttons--cqw3Y > a:has-text("Download")')
+    Download_Btn = page.get_by_text("Download")
     with page.expect_download() as download_info:
         Download_Btn.click()
         download = download_info.value
-        download.save_as("moon1.jpg")
+        download.save_as("moon2.jpg")
 
     time.sleep(10)
 
